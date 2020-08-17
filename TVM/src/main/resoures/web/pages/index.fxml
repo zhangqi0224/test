@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="768.0" maxWidth="1024.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" stylesheets="../css/common.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.HomeController">
+   <children>
+     <!-- 头部-->
+      <Pane maxHeight="71.0" maxWidth="1024.0" prefHeight="71.0" prefWidth="1024.0" styleClass="header" stylesheets="@../css/common.css">
+         <children>
+            <Pane maxHeight="70.0" maxWidth="200.0" prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="71.0" fitWidth="200.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/common/TianjinMetro.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="250.0" prefHeight="70.0" prefWidth="524.0" styleClass="header_center">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="524.0" style="-fx-font-family: Arial;" styleClass="huanying" stylesheets="@../css/common.css" text="欢迎使用自动查询机">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="8.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Italic" size="12.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="40.0" prefHeight="30.0" prefWidth="524.0" style="-fx-font-size: 20; -fx-font-family: Arial;" text="Welcome to Ticket Checking Machine" />
+                  <Line endX="1048.0" layoutX="-274.0" layoutY="70.0" startX="24.0" startY="1.0" stroke="GAINSBORO" />
+               </children>
+            </Pane>
+            <Pane layoutX="824.0" prefHeight="70.0" prefWidth="200.0" styleClass="header_right">
+               <children>
+                  <Label fx:id="nowDate" alignment="CENTER" contentDisplay="CENTER" layoutY="8.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="nowTime" alignment="CENTER" contentDisplay="CENTER" layoutY="35.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="WHITE" />
+               </children>
+            </Pane>
+         </children></Pane>
+   <!--  主体部分 -->
+      <Pane fx:id="homeBodyPane" layoutY="71.0" maxHeight="653.0" prefHeight="653.0" prefWidth="1024.0" style="-fx-background-color: rgba(3, 95, 132, 1);" styleClass="center" stylesheets="@../css/common.css">
+         <children>
+
+          <!--  主页面-->
+            <HBox fx:id="InfoFxml">
+               <children>
+                  <Pane maxHeight="652.0" maxWidth="840.0" prefHeight="652.0" prefWidth="840.0" styleClass="content" stylesheets="@../css/common.css">
+                     <children>
+                        <GridPane fx:id="headNavigationId" layoutX="150.0" layoutY="50.0" prefHeight="550.0" prefWidth="540.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="10.0" prefWidth="270.0" />
+                              <ColumnConstraints maxWidth="270.0" minWidth="10.0" prefWidth="270.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#TicketSearch" prefHeight="140.0" prefWidth="160.0" styleClass="infobutton" stylesheets="@../css/common.css">
+                                 <graphic>
+                                    <Pane styleClass="infobuttonpane">
+                                       <children>
+                                          <ImageView fitHeight="92.0" fitWidth="135.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../img/homeicon/ticketsearch.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D />
+                                             </viewport>
+                                          </ImageView>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-15.0" layoutY="100.0" styleClass="infobuttonlabel" stylesheets="@../css/common.css" text="车票查询" />
+                                       </children>
+                                    </Pane>
+                                 </graphic></Button>
+                              <Button alignment="TOP_CENTER" layoutX="10.0" layoutY="32.0" mnemonicParsing="false" onAction="#LineSearch" prefHeight="140.0" prefWidth="160.0" styleClass="infobutton" stylesheets="@../css/common.css" GridPane.columnIndex="1">
+                                 <graphic>
+                                    <Pane styleClass="infobuttonpane">
+                                       <children>
+                                          <ImageView fitHeight="92.0" fitWidth="135.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../img/homeicon/routeseasrch.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D />
+                                             </viewport>
+                                          </ImageView>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-15.0" layoutY="100.0" styleClass="infobuttonlabel" text="线路查询" />
+                                       </children>
+                                    </Pane>
+                                 </graphic>
+                                 <GridPane.margin>
+                                    <Insets left="110.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button alignment="TOP_CENTER" layoutX="10.0" layoutY="32.0" mnemonicParsing="false" onAction="#PriceSearch" prefHeight="140.0" prefWidth="160.0" styleClass="infobutton" stylesheets="@../css/common.css" GridPane.rowIndex="1">
+                                 <graphic>
+                                    <Pane styleClass="infobuttonpane">
+                                       <children>
+                                          <ImageView fitHeight="92.0" fitWidth="135.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../img/homeicon/pricesearch.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D />
+                                             </viewport>
+                                          </ImageView>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-15.0" layoutY="100.0" styleClass="infobuttonlabel" text="票价查询" />
+                                       </children>
+                                    </Pane>
+                                 </graphic>
+                                 <GridPane.margin>
+                                    <Insets left="50.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button alignment="TOP_CENTER" layoutX="10.0" layoutY="216.0" mnemonicParsing="false" onAction="#Passenger" prefHeight="140.0" prefWidth="160.0" styleClass="infobutton" stylesheets="@../css/common.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <graphic>
+                                    <Pane styleClass="infobuttonpane">
+                                       <children>
+                                          <ImageView fitHeight="92.0" fitWidth="135.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../img/homeicon/passenger.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D />
+                                             </viewport>
+                                          </ImageView>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-15.0" layoutY="100.0" styleClass="infobuttonlabel" text="乘客须知" />
+                                       </children>
+                                    </Pane>
+                                 </graphic>
+                                 <GridPane.margin>
+                                    <Insets left="60.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button alignment="TOP_CENTER" layoutX="300.0" layoutY="216.0" mnemonicParsing="false" onAction="#Service" prefHeight="140.0" prefWidth="160.0" styleClass="infobutton" stylesheets="@../css/common.css" GridPane.rowIndex="2">
+                                 <graphic>
+                                    <Pane styleClass="infobuttonpane">
+                                       <children>
+                                          <ImageView fitHeight="92.0" fitWidth="135.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../img/homeicon/service.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D />
+                                             </viewport>
+                                          </ImageView>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-15.0" layoutY="100.0" styleClass="infobuttonlabel" text="服务设施设置" />
+                                       </children>
+                                    </Pane>
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="399.0" mnemonicParsing="false" onAction="#TimeTable" prefHeight="140.0" prefWidth="160.0" styleClass="infobutton" stylesheets="@../css/common.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <graphic>
+                                    <Pane styleClass="infobuttonpane">
+                                       <children>
+                                          <ImageView fitHeight="92.0" fitWidth="135.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../img/homeicon/time.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D />
+                                             </viewport>
+                                          </ImageView>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-15.0" layoutY="100.0" styleClass="infobuttonlabel" text="首末班时刻表" />
+                                       </children>
+                                    </Pane>
+                                 </graphic>
+                                 <GridPane.margin>
+                                    <Insets left="110.0" />
+                                 </GridPane.margin>
+                              </Button>
+                           </children>
+                        </GridPane>
+                     </children></Pane>
+                  <Pane prefHeight="652.0" prefWidth="184.0" styleClass="content_right" stylesheets="@../css/common.css">
+                     <children>
+                        <VBox maxWidth="1.7976931348623157E308" prefHeight="652.0" prefWidth="184.0">
+                           <children>
+                              <Label fx:id="stationName" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="184.0" style="-fx-font-family: Arial;" text="营口道" textFill="#f0f0f0">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin></Label>
+                              <Label fx:id="serviceStatus" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="184.0" style="-fx-font-family: Arial;" text="正常服务" textFill="#f0f0f0">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin></Label>
+                              <ImageView fitHeight="126.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/homeicon/menu_english.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="29.0" top="350.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children></Pane>
+               </children>
+            </HBox>
+
+
+            <!--  引入车票查询页面-->
+      <fx:include fx:id="ticketSearchFxml" managed="false" source="ticketSearch.fxml" visible="false" />
+
+      <!--  引入线路查询页面-->
+    <fx:include fx:id="lineSearchFxml" managed="false" source="lineSearch.fxml" visible="false" />
+      <!--  引入票价页面-->
+      <fx:include fx:id="priceSearchFxml" managed="false" source="priceSearch.fxml" visible="false" />
+      <!--  引入乘客须知页面-->
+      <fx:include fx:id="passengerFxml" managed="false" source="passenger.fxml" visible="false" />
+      <!--  引入服务设施设置页面-->
+      <fx:include fx:id="serviceFxml" managed="false" source="service.fxml" visible="false" />
+      <!--  引入首末班时刻表页面-->
+      <fx:include fx:id="timeTableFxml" managed="false" source="timeTable.fxml" visible="false" />
+      <Line endX="929.0" endY="1.0" layoutX="95.0" layoutY="651.0" startX="-107.70710754394531" startY="1.0" stroke="GAINSBORO" />
+         </children>
+      </Pane>
+   <!-- 底部 -->
+      <Pane layoutY="724.0" prefHeight="44.0" prefWidth="1024.0" styleClass="footer" stylesheets="@../css/common.css">
+         <children>
+            <Label fx:id="footer_version" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="44.0" prefWidth="1024.0" styleClass="footer_version" stylesheets="@../css/common.css" text="V.1.24.47" textAlignment="CENTER" />
+         </children></Pane>
+   </children>
+</AnchorPane>

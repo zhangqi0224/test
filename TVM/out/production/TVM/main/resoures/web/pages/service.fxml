@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="652" prefWidth="1024" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.ServiceController">
+   <children>
+      <HBox>
+         <children>
+            <Pane maxHeight="652.0" maxWidth="840.0" prefHeight="652.0" prefWidth="840.0" styleClass="content" stylesheets="@../css/common.css">
+               <children>
+                  <VBox layoutX="42.0" prefWidth="756.0">
+                     <children>
+                        <HBox maxHeight="42.0" minHeight="42.0" prefHeight="42.0">
+                           <children>
+                              <Label style="-fx-text-fill: rgb(25, 167, 25);" styleClass="servicelabel" text="营口道站" />
+                              <Label layoutY="76.0" styleClass="servicelabel" text="无障碍服务设施配置" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="50.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="serviceTable" prefHeight="480.0" prefWidth="756.0" style="-fx-border-color: #BFBFBF;" styleClass="tableview">
+                          <columns>
+                            <TableColumn fx:id="serviceName" prefWidth="75.0" styleClass="ticketsearchrestab" text="名称" />
+                            <TableColumn fx:id="servicePosition" prefWidth="75.0" styleClass="ticketsearchrestab" text="位置" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+
+
+               </children></Pane>
+            <Pane prefHeight="652.0" prefWidth="184.0" styleClass="content_right" stylesheets="@../css/common.css">
+               <children>
+                  <VBox maxWidth="1.7976931348623157E308" prefHeight="652.0" prefWidth="184.0">
+                     <children>
+                        <Label fx:id="stationName" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="184.0" style="-fx-font-family: Arial;" text="营口道" textFill="#f0f0f0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="serviceStatus" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="184.0" style="-fx-font-family: Arial;" text="正常服务" textFill="#f0f0f0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></Label>
+                        <ImageView fitHeight="126.0" fitWidth="126.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/common/return.jpg" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="29.0" top="350.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children></Pane>
+         </children>
+      </HBox>
+      <!-- 引入倒计时-->
+      <fx:include source="timeCount.fxml" fx:id="timeCount" />
+   </children>
+</AnchorPane>

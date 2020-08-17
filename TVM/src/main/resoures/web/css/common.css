@@ -1,0 +1,207 @@
+* {
+   -fx-font-family: "Arial";
+    /*-fx-font-weight: 700; */
+}
+
+
+
+.header {
+    -fx-background-image: url(../img/common/newtop_bg.jpg);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%;
+
+}
+
+  .huanying {
+    -fx-font-size: 32px;
+}
+
+  .header_right {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.footer {
+    -fx-background-image: url(../img/common/bottom_bg.jpg);
+}
+
+ .footer_version {
+    -fx-font-size: 18px;
+     -fx-alignment: center;
+     -fx-text-fill: white;
+     -fx-pref-height: 46px;
+     -fx-font-family: "Arial";
+}
+
+.content{
+    -fx-background-image: url(../img/common/image_bg.jpg);
+    -fx-pref-height: 652px;
+    -fx-pref-width: 840px;
+}
+
+.content_right {
+    -fx-font-size: 30px;
+    -fx-alignment: center;
+    -fx-background-color: rgba(3, 95, 132, 1);
+    -fx-font-family: Arial;
+}
+/*Info页面*/
+.infobutton{
+    -fx-pref-width: 160px;
+    -fx-pref-height: 140px;
+    -fx-background-color:#4a6ad1;
+    -fx-border-width:1px;
+    -fx-border-style: solid;
+    -fx-border-color: #004055;
+    -fx-font-size: 20px;
+    -fx-font-family: "Arial";
+    -fx-border-radius: 22px;
+    -fx-background-radius: 22px;
+    -fx-cursor: hand;
+
+
+}
+.infobuttonpane{
+-fx-pref-width: 160px;
+-fx-pref-height: 140px
+}
+
+
+.infobuttonlabel{
+ -fx-pref-width: 160px;
+    -fx-pref-height:40px;
+    -fx-background-color: rgba(197, 214, 230, 1);
+    -fx-background-radius: 0 0 21 21;
+    -fx-font-size: 20px;
+    -fx-alignment: center;
+}
+/*倒计时300*/
+.timecount{
+    -fx-pref-width: 840px;
+    -fx-pref-height: 60px;
+    -fx-alignment: center-right;
+    -fx-font-size: 40px;
+    -fx-text-fill: rgb(202, 19, 19);
+    -fx-background-position: right 10;
+
+}
+
+
+
+
+/* 车票查询 */
+.ticketsearchlabel{
+    -fx-pref-height: 62px;
+    -fx-pref-width: 840px;
+    -fx-alignment: center;
+    -fx-font-size: 38px;
+    -fx-font-weight: 600;
+}
+/* 车票查询结果 */
+.ticketsearchresultlabel{
+    -fx-pref-height: 62px;
+    -fx-pref-width: 840px;
+    -fx-alignment:center ;
+    -fx-font-size: 38px;
+    -fx-font-weight: 600;
+}
+.ticketsearchresgridlabel{
+-fx-font-size: 26px;
+-fx-text-fill: #666;
+    -fx-alignment: center;
+    -fx-background-color: rgba(197, 214, 230, 1);
+    -fx-border-color: #E6E6E6;
+    -fx-border-insets: 1 0 0 0;
+}
+.ticketsearchresgridres{
+    -fx-font-size: 16px;
+    -fx-text-fill: #666;
+    -fx-alignment: center-left;
+    -fx-background-color: white;
+    -fx-border-color:#E6E6E6;
+    -fx-border-insets:0 0 0 0;
+    -fx-padding: 0px 0px 0px 20px;
+}
+.tableview .column-header
+{
+    -fx-background-color: rgba(197, 214, 230, 1);
+    -fx-pref-height: 40px;
+    -fx-font-size: 17px;
+
+}
+.ticketsearchrestab{
+
+    -fx-font-size:17px;
+    -fx-border-color: #E6E6E6;
+
+
+}
+
+
+/* 线路查询 */
+
+.linesearchimg {
+   -fx-pref-width: 840px;
+    -fx-pref-height: 600px;
+
+}
+.linesearchbutton{
+    -fx-pref-height: 50px;
+    -fx-cursor: hand;
+
+}
+
+/*票价查询*/
+.pricelabel{
+    -fx-pref-height: 38px;
+    -fx-pref-width: 164px;
+ -fx-alignment: center;
+    -fx-background-radius:10px;
+    -fx-font-size: 30px;
+    -fx-padding: -3 0 -3 0;
+    -fx-cursor: hand;
+}
+.pricePopup{
+    -fx-pref-width: 420px;
+    -fx-pref-height: 80px;
+    -fx-background-color: white;
+}
+.pricePopupbtn{
+    -fx-pref-width: 130px;
+    -fx-pref-height:50px;
+    -fx-background-color: deepskyblue;
+    -fx-text-fill: white;
+    -fx-font-size: 25px;
+    -fx-cursor: hand;
+    -fx-padding: 0 2 0 2;
+}
+
+
+
+
+
+
+/* 服务设施配置 */
+
+.servicelabel{
+    -fx-pref-height: 62px;
+    -fx-alignment:center ;
+    -fx-font-size: 38px;
+
+}
+
+
+ /*分页组件*/
+.pagination{
+    -fx-page-information-visible: false;
+    -fx-cursor: hand;
+    -fx-font-size: 23px;
+
+
+}
+
+
+.pagination .pagination-control {
+
+}
+

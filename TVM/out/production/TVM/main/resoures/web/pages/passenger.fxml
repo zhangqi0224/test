@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="652" prefWidth="1024" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.PassengerController">
+   <children>
+      <HBox>
+         <children>
+
+         <!-- 左侧 -->
+            <Pane maxHeight="652.0" maxWidth="840.0" prefHeight="652.0" prefWidth="840.0" styleClass="content" stylesheets="@../css/common.css">
+               <children>
+                  <Pane fx:id="passengerImg" layoutX="100.0" prefHeight="646.0" prefWidth="640.0">
+                     <children>
+                        <Pane fx:id="firstBox" layoutY="25.0">
+                              <children>
+                                 <!--  图片-->
+                                 <ImageView fitHeight="575.0" fitWidth="640.0" managed="true" pickOnBounds="true" styleClass="linesearchimg" visible="true">
+                                    <image>
+                                       <Image url="@../img/passenger/guanliPage1.jpg" />
+                                    </image>
+                                 </ImageView>
+                                 <ImageView fitHeight="575.0" fitWidth="640.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                                    <image>
+                                       <Image url="@../img/passenger/guanliPage2.jpg" />
+                                    </image>
+                                 </ImageView>
+                                 <ImageView fitHeight="575.0" fitWidth="640.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                                    <image>
+                                       <Image url="@../img/passenger/guanliPage3.jpg" />
+                                    </image>
+                                 </ImageView>
+                                 <ImageView fitHeight="575.0" fitWidth="640.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                                    <image>
+                                       <Image url="@../img/passenger/guanliPage4.jpg" />
+                                    </image>
+                                 </ImageView>
+                              </children>
+                           </Pane>
+                        <Pane layoutY="25.0" managed="false" visible="false">
+                           <children>
+                              <ImageView fitHeight="575.0" fitWidth="640.0" managed="true" pickOnBounds="true" styleClass="linesearchimg" visible="true">
+                                 <image>
+                                    <Image url="@../img/passenger/shouzePage1.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="575.0" fitWidth="640.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                                 <image>
+                                    <Image url="@../img/passenger/shouzePage2.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="575.0" fitWidth="640.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                                 <image>
+                                    <Image url="@../img/passenger/shouzePage3.jpg" />
+                                 </image>
+                              </ImageView>
+                              </children>
+                        </Pane>
+                        <Pane layoutY="25.0" managed="false" visible="false">
+                           <children>
+                              <ImageView fitHeight="575.0" fitWidth="640.0" managed="true" pickOnBounds="true" styleClass="linesearchimg" visible="true">
+                                 <image>
+                                    <Image url="@../img/passenger/guanliPage1.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="575.0" fitWidth="640.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                                 <image>
+                                    <Image url="@../img/passenger/guanliPage2.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="575.0" fitWidth="640.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                                 <image>
+                                    <Image url="@../img/passenger/guanliPage3.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="575.0" fitWidth="640.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                                 <image>
+                                    <Image url="@../img/passenger/guanliPage4.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutY="25.0" managed="false" visible="false">
+                           <children>
+                              <ImageView fitHeight="575.0" fitWidth="640.0" managed="true" pickOnBounds="true" styleClass="linesearchimg" visible="true">
+                                 <image>
+                                    <Image url="@../img/passenger/guanliPage2.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="575.0" fitWidth="640.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                                 <image>
+                                    <Image url="@../img/passenger/guanliPage3.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="575.0" fitWidth="640.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                                 <image>
+                                    <Image url="@../img/passenger/guanliPage4.jpg" />
+                                 </image>
+                              </ImageView>
+                               </children>
+                        </Pane>
+      
+                        <Pagination fx:id="pagination" layoutY="589.0" maxPageIndicatorCount="3" pageCount="4" prefHeight="48.0" prefWidth="640.0" styleClass="pagination" />
+                     </children>
+                     <padding>
+                        <Insets top="25.0" />
+                     </padding>
+                  </Pane>
+
+
+               </children>
+            </Pane>
+
+         <!-- 右侧-->
+            <Pane prefHeight="652.0" prefWidth="184.0" styleClass="content_right" stylesheets="@../css/common.css">
+               <children>
+                  <VBox maxWidth="184.0" prefHeight="652.0" prefWidth="184.0">
+                     <children>
+                        <Label fx:id="stationName" alignment="CENTER" contentDisplay="CENTER" maxWidth="184.0" prefHeight="35.0" prefWidth="184.0" style="-fx-font-family: Arial;" text="营口道" textFill="#f0f0f0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="serviceStatus" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="184.0" prefHeight="35.0" prefWidth="184.0" text="正常服务" textFill="#f0f0f0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></Label>
+                        <Line endX="84.0" startX="-100.0" stroke="ALICEBLUE" strokeWidth="2.0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Line>
+                        <VBox fx:id="passengerButton" prefHeight="280.0" prefWidth="184.0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <children>
+
+                              <ImageView fitHeight="38.0" fitWidth="164.0" pickOnBounds="true" styleClass="pricelabel">
+                                 <image>
+                                    <Image url="@../img/passenger/right_guanli.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="38.0" fitWidth="164.0" pickOnBounds="true" smooth="false" styleClass="pricelabel">
+                                 <image>
+                                    <Image url="@../img/passenger/right_shouze.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="38.0" fitWidth="164.0" pickOnBounds="true" smooth="false" styleClass="pricelabel">
+                                 <image>
+                                    <Image url="@../img/passenger/right_anjian.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="38.0" fitWidth="164.0" pickOnBounds="true" smooth="false" styleClass="pricelabel">
+                                 <image>
+                                    <Image url="@../img/passenger/right_piaowu.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                           </children>
+                        </VBox>
+
+                        <ImageView fitHeight="126.0" fitWidth="126.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/common/return.jpg" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="29.0" top="30.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <fx:include source="timeCount.fxml" fx:id="timeCount" />
+   </children>
+</AnchorPane>

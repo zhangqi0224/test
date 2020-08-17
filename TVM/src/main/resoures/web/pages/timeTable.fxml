@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="652" prefWidth="1024" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.TimeTableController">
+   <children>
+      <HBox>
+         <children>
+            <Pane maxHeight="652.0" maxWidth="840.0" prefHeight="652.0" prefWidth="840.0" styleClass="content" stylesheets="@../css/common.css">
+               <children>
+
+
+                  <Pane fx:id="lineImg">
+                       <children>
+                        <!--  线路图片-->
+                        <ImageView fitHeight="575.0" fitWidth="640.0" layoutX="100.0" layoutY="25.0" managed="true" pickOnBounds="true" styleClass="linesearchimg" visible="true">
+                           <image>
+                              <Image url="@../img/timetable/time1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="575.0" fitWidth="640.0" layoutX="100.0" layoutY="25.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                           <image>
+                              <Image url="@../img/timetable/time2.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="575.0" fitWidth="640.0" layoutX="100.0" layoutY="25.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                           <image>
+                              <Image url="@../img/timetable/time3.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="575.0" fitWidth="640.0" layoutX="100.0" layoutY="25.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                           <image>
+                              <Image url="@../img/timetable/time1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="575.0" fitWidth="640.0" layoutX="100.0" layoutY="25.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                           <image>
+                              <Image url="@../img/timetable/time6.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="575.0" fitWidth="640.0" layoutX="100.0" layoutY="25.0" managed="false" pickOnBounds="true" styleClass="linesearchimg" visible="false">
+                           <image>
+                              <Image url="@../img/timetable/time1.jpg" />
+                           </image>
+                        </ImageView>
+   </children>
+                     <padding>
+                        <Insets top="25.0" />
+                     </padding>
+
+                  </Pane>
+
+
+                  <!--  线路按钮-->
+                  <HBox fx:id="lineButton" layoutY="601.0" maxHeight="50.0" prefHeight="50.0" prefWidth="840.0">
+                     <children>
+
+                        <ImageView fitHeight="50.0" fitWidth="122.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="linesearchbutton">
+                           <image>
+                              <Image url="@../img/routesearch/line1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="200.0" layoutX="112.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="linesearchbutton">
+                           <image>
+                              <Image url="@../img/routesearch/line2.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="200.0" layoutX="219.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="linesearchbutton">
+                           <image>
+                              <Image url="@../img/routesearch/line3.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="200.0" layoutX="326.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="linesearchbutton">
+                           <image>
+                              <Image url="@../img/routesearch/line5.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="200.0" layoutX="434.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="linesearchbutton">
+                           <image>
+                              <Image url="@../img/routesearch/line6.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="200.0" layoutX="542.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="linesearchbutton">
+                           <image>
+                              <Image url="@../img/routesearch/line9.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+
+
+               </children>
+            </Pane>
+            <Pane prefHeight="652.0" prefWidth="184.0" styleClass="content_right" stylesheets="@../css/common.css">
+               <children>
+                  <VBox maxWidth="1.7976931348623157E308" prefHeight="652.0" prefWidth="184.0">
+                     <children>
+                        <Label fx:id="stationName" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="184.0" style="-fx-font-family: Arial;" text="营口道" textFill="#f0f0f0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="serviceStatus" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="184.0" style="-fx-font-family: Arial;" text="正常服务" textFill="#f0f0f0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></Label>
+                        <ImageView fitHeight="126.0" fitWidth="126.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/common/return.jpg" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="29.0" top="350.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children></Pane>
+         </children>
+      </HBox>
+      <!-- 引入倒计时-->
+      <fx:include source="timeCount.fxml" fx:id="timeCount" />
+   </children>
+</AnchorPane>
